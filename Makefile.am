@@ -3,7 +3,7 @@
 AUTOMAKE_OPTIONS = 1.3 foreign
 
 SUBDIRS	= compiler c-lib c++-lib tbl-tools asn1specs @TCLDIRS@ doc
-EXTRA_DIST = version.h policy.h snacc.h snacc.m4
+EXTRA_DIST = version.h policy.h snacc.h snacc.m4 c++-examples c-examples
 bin_SCRIPTS = snacc-config
 cpkgincludedir = $(pkgincludedir)/c
 cpkginclude_HEADERS = policy.h snacc.h snaccconfig.h
