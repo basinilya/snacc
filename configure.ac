@@ -97,6 +97,8 @@ AC_MSG_CHECKING( for variable sized automatic arrays)
 AC_TRY_COMPILE( , changequote(<,>)int i = 42; char a[++i]; *a = i;changequote([,]), [AC_DEFINE( HAVE_VARIABLE_SIZED_AUTOMATIC_ARRAYS) AC_MSG_RESULT( yes)], AC_MSG_RESULT( no))
 AC_MSG_CHECKING( for volatile functions)
 AC_TRY_COMPILE( , changequote(<,>)abort();changequote([,]), [AC_MSG_RESULT( yes)], [AC_DEFINE( COMPILER_WITHOUT_VOLATILE_FUNCTIONS) SNACC_NOVOLAT=-novolat; AC_SUBST( SNACC_NOVOLAT) AC_MSG_RESULT( no)])
+saveCXXFLAGS="$CXXFLAGS"; CXXFLAGS="$CXXFLAGS -fpermissive"
+AC_TRY_COMPILE([ ], [int i;], [], [CXXFLAGS="$saveCXXFLAGS"])
 AC_LANG_C
 AM_PROG_LEX
 case "$LEX" in
