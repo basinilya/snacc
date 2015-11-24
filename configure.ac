@@ -58,9 +58,9 @@ dnl
 dnl	Revision 1.1  1994/09/01  00:51:22  rj
 dnl	first check-in (new file).
 dnl
-AC_INIT( compiler/core/snacc.c)
-AC_REVISION($Revision: 1.3.1 $)
-AM_INIT_AUTOMAKE(snacc, 1.3.1)
+AC_INIT( compiler/core/snacc.c, m4_esyscmd_s([./version.sh]))
+AC_REVISION($Revision: AC_PACKAGE_VERSION $)
+AM_INIT_AUTOMAKE(snacc, AC_PACKAGE_VERSION)
 AM_MAINTAINER_MODE
 AC_CONFIG_HEADER(config.h)
 dnl --- alternative programs:

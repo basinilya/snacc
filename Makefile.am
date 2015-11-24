@@ -17,3 +17,6 @@ pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = snacc-c-ebuf.pc
 
 noinst_DATA = snacc-c-ebuf-uninstalled.pc
+
+dist-hook:
+	printf "%s\n" "$(VERSION)" >$(distdir)/version.txt
