@@ -29,6 +29,7 @@ LIBOBJ
 /configure
 /config.h.in
 /config.h
+/compile
 /install-sh
 /missing
 /snaccconfig.h
