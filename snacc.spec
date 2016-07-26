@@ -1,6 +1,6 @@
 Name:           snacc
 Version:        1.3.1_16_g23ba7a6
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sample Neufeld ASN.1 to C Compiler
 
 Group:          Applications/System
@@ -12,6 +12,9 @@ Source0:        %{name}-%{version}.tar.gz
 BUILDROOT:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  autoconf automake libtool flex bison
+
+# In RHEL6.5 it's part of flex package. In later releases it's part of flex-devel
+BuildRequires:  %{_libdir}/libfl.a
 
 %description
 Snacc is Sample Neufeld ASN.1 to C compiler that can produce C, C++ routines
